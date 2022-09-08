@@ -122,3 +122,15 @@ fetch("http://localhost:9292/test")
 [dbdiagram.io]: https://dbdiagram.io/
 [postman download]: https://www.postman.com/downloads/
 [network tab]: https://developer.chrome.com/docs/devtools/network/
+
+## what the table will look like:
+-foreign key=>will be housed in child object tables(the object belongs to another object)
+author=>has many books
+        has many categories through categories
+category=> has many books,has many authors  
+book =>belongs to an author, 
+        belongs to a category
+       
+book category will have the foreign key
+
+-Belongs_to macro:provides methods to return associated object data
