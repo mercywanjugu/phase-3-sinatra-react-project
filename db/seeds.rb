@@ -6,6 +6,13 @@ puts "🌱 Seeding spices..."
 #     Author.create(
 #          name: Faker::Name.name
 #      )
-#  end
+#end
+#    100.times do
+#      Category.create(
+#         name: Faker::Book.title,
+#         content: Faker::Book.genre
+
+#      )
+#   end
 
 puts "✅ Done seeding!"

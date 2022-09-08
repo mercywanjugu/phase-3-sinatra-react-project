@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2022_09_08_130446) do
     t.integer "categories_id"
   end
 
-  create_table "category", force: :cascade do |t|
-    t.string "title"
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
     t.text "content"
   end
 
