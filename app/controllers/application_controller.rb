@@ -5,9 +5,15 @@ class ApplicationController < Sinatra::Base
   get "/" do
     { message: "Good luck with your project!" }.to_json
   end
-  get "/articles" do
-    articles = Article.all
-    articles.to_json
-  end
+  get '/books' do
+    allbooks = Book.all
+    allbooks.to_json(include: :authors)
+end
+
+get '/authors' do
+    allauthors = Author.all
+    allauthors.to_json(include: :books)
+end
+
 
 end

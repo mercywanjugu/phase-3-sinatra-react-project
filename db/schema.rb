@@ -10,21 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_08_130446) do
+ActiveRecord::Schema.define(version: 2022_09_11_192853) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
+    t.string "bio"
+  end
+
+  create_table "bookauthors", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "author_id"
   end
 
   create_table "books", force: :cascade do |t|
-    t.string "name"
-    t.integer "author_id"
-    t.integer "categories_id"
+    t.string "title"
+    t.integer "year_published"
+    t.integer "genre_id"
+    t.integer "is_borrowed"
   end
 
-  create_table "categories", force: :cascade do |t|
+  create_table "borrowlogs", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "user_id"
+    t.boolean "is_returned"
+  end
+
+  create_table "genres", force: :cascade do |t|
     t.string "name"
-    t.text "content"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "user_id"
+    t.string "review_comment"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
   end
 
 end
