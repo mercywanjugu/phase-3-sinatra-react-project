@@ -1,4 +1,4 @@
-class Genre < ActiveRecord::Base 
+class Genre <ActiveRecord::Base 
     # has_many :books
     
 end
