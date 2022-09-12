@@ -1,4 +1,8 @@
+
+
 source "https://rubygems.org"
+
+ruby "2.7.0"
 
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
@@ -29,7 +33,9 @@ gem "sinatra-activerecord", "~> 2.0"
 gem "rake", "~> 13.0"
 
 # Provides functionality to interact with a SQLite3 database
-gem "sqlite3", "~> 1.4"
+# gem "sqlite3", "~> 1.4"
+
+gem "faker", "~> 2.18"
 
 # Require all files in a folder
 gem "require_all", "~> 3.0"
@@ -43,6 +49,8 @@ group :development do
   gem "rerun"
 end
 
+
+
 # These gems will only be used when we are running tests
 group :test do
   gem "database_cleaner", "~> 2.0"
@@ -51,5 +59,8 @@ group :test do
   gem "rspec-json_expectations", "~> 2.2"
 end
 
-gem "faker"
-gem "shotgun"
+group :production do
+  # gem 'pg', '~> 1.4', '>= 1.4.3'
+end
+
+gem 'sinatra-contrib', '~> 2.2', '>= 2.2.2',require: false
