@@ -1,2 +1,5 @@
 class Review < ActiveRecord::Base 
-end
+
+    belongs_to :book
+
+end 

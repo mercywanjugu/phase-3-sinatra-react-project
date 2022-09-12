@@ -1,7 +1,5 @@
 class Author <ActiveRecord::Base
-    has_many :bookauthors
-  
-
-    has_many :books, through: :bookauthors
+has_many :books
+has_many :users, through: :books
     
 end

@@ -1,4 +1,5 @@
 class Book <ActiveRecord::Base
-    has_many :bookauthors
-    has_many :authors ,through: :bookauthors
+    belongs_to :user
+    belongs_to :author
+     has_many :reviews
 end  
